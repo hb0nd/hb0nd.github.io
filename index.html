@@ -41,13 +41,14 @@
       var hrs = ("0" + d.getHours()).slice(-2);
       var mins = ("0" + d.getMinutes()).slice(-2);
       var ampm = "AM"
-      
+
       if (hrs>12){
         var ampm = "PM";
         var hrs = hrs - 12;
       }
       clock_element.innerHTML = hrs + ":" + mins + " " + ampm;
     }
+      getTime();
       setInterval(getTime, 1000);
     </script>
   </span>
