@@ -23,6 +23,8 @@
 
 <a class="winui winuiinteract" onclick="anotherNeko();return false;">Add More</a>
 
+<img class="position:absolute" src="assets/images/bin.png"/>
+
 <div class="taskbar winui position-absolute bottom-0">
 
   <span class="winui winuiinteract">
@@ -32,6 +34,7 @@
 
   <span class="winuiinvert position-absolute bottom-0 end-0" name="time">
     <script>
+    function getTime(){
       var d = new Date();
       var dt = new Date(1,1,1,1,1,1,1);
       var clock_element = document.getElementsByName("time")[0];
@@ -39,7 +42,9 @@
       if (d.getHours()>12){
         var ampm = "PM";
       }
-      clock_element.innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2) + " "+ ampm;
+      clock_element.innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2) +" "+ ampm;
+    }
+      setInterval(getTime, 1000);
     </script>
   </span>
 </div>
