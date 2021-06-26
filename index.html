@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <html lang="en" dir="ltr">
   <meta name="author" content="Harry Bond">
-  <meta name="description" content="Free Web tutorials">
+  <meta name="description" content="website where i put stuff">
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
@@ -21,37 +21,55 @@
 <!--Content-->
 <h1 class="text-center mt-5">Harry's Web Projects</h1>
 
-<a class="winui winuiinteract" onclick="anotherNeko();return false;">Add More</a>
+<a class="winui winuiinteract text-end position-absolute" onclick="anotherNeko();return false;">Add More</a>
 
-<img class="position:absolute" src="assets/images/bin.png"/>
+<div class="container-fluid">
+  <div class="taskbar winui row position-absolute bottom-0">
 
-<div class="taskbar winui position-absolute bottom-0">
+    <span class="winui winuiinteract w-auto d-flex align-items-center me-1">
+      <img class="baricon" src="assets/images/startlogo.gif"/>
+      &nbsp;Start
+    </span>
 
-  <span class="winui winuiinteract">
-    <img class="startlogo" src="assets/images/startlogo.gif"/>
-    Start
-  </span>
+    <span class="winui winuiinteract barelement d-flex align-items-center me-1">
+      <img class="baricon" src="assets/images/Notepad.ico"/>
+      &nbsp;Hi There.txt - Notepad
+    </span>
 
-  <span class="winuiinvert position-absolute bottom-0 end-0" name="time">
-    <script>
-    function getTime(){
-      var d = new Date();
-      var dt = new Date(1,1,1,1,1,1,1);
-      var clock_element = document.getElementsByName("time")[0];
-      var hrs = ("0" + d.getHours()).slice(-2);
-      var mins = ("0" + d.getMinutes()).slice(-2);
-      var ampm = "AM"
+    <span class="winui winuiinteract barelement d-flex align-items-center me-1">
+      <img class="baricon" src="assets/images/Notepad.ico"/>
+      &nbsp;How.txt - Notepad
+    </span>
 
-      if (hrs>12){
-        var ampm = "PM";
-        var hrs = hrs - 12;
+    <span class="winui winuiinteract barelement d-flex align-items-center me-1">
+      <img class="baricon" src="assets/images/Notepad.ico"/>
+      &nbsp;are u.txt - Notepad
+    </span>
+
+    <span class="winui winuiinvert w-auto d-flex align-items-center ms-auto">
+      <img class="baricon" src="assets/images/3D Computer.ico"/>
+      &nbsp;<div name="time"></div>
+      <script>
+      function getTime(){
+        var d = new Date();
+        var dt = new Date(1,1,1,1,1,1,1);
+        var clock_element = document.getElementsByName("time")[0];
+        var hrs = ("0" + d.getHours()).slice(-2);
+        var mins = ("0" + d.getMinutes()).slice(-2);
+        var ampm = "AM"
+
+        if (hrs>12){
+          var ampm = "PM";
+          var hrs = hrs - 12;
+        }
+        clock_element.innerHTML = hrs + ":" + mins + " " + ampm;
       }
-      clock_element.innerHTML = hrs + ":" + mins + " " + ampm;
-    }
-      getTime();
-      setInterval(getTime, 1000);
-    </script>
-  </span>
+        getTime();
+        setInterval(getTime, 1000);
+      </script>
+    </span>
+
+  </div>
 </div>
 
 <!-- Neko-->
