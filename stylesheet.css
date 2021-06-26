@@ -8,4 +8,5 @@ font-family: monospace;
 
 body{
   background-color: #141414;
+  background-image:url('assets/images/grid.png');
 }
