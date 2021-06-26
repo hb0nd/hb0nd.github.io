@@ -11,6 +11,7 @@
 body{
   background-color: #008080;
   user-select: none !important;
+  overflow: hidden;
 }
 
 .winui{
@@ -41,4 +42,9 @@ body{
 
 .startlogo{
   height:24px;
+}
+
+[ID^="layerNeko"]{
+  overflow: hidden;
+  position: relative;
 }
