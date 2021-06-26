@@ -1,8 +1,11 @@
 
 /* Made by Harry Bond 2021 */
 
+*{
+color:white;
+font-family: monospace;
+}
+
 body{
-  background-color: purple;
-  background-image: url('assets/images/grid.png');
-  background-size: 32px;
+  background-color: #141414;
 }
