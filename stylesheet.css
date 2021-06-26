@@ -2,12 +2,41 @@
 /* Made by Harry Bond 2021 */
 
 *{
-color:white;
-font-family: monospace;
+  color: black !important;
+  font-family: monospace;
+  font-weight: bold !important;
 }
 
 body{
-  background-color: #141414;
-  background-image:url('assets/images/grid.png');
-  background-size: 24px;
+  background-color: #008080;
+}
+
+.winui{
+  border-color:#fafafa #333333 #333333 #fafafa;
+  background-color: #C7C7C7;
+  border-width:1%;
+  padding:2px;
+  text-decoration: none;
+  border-style: outset;
+}
+
+.winuihover:hover{
+  border-color:#333333 #fafafa #fafafa #333333;
+  border-style: inset;
+  background-image: url("assets/images/dither.gif");
+}
+.winuiinvert{
+  border-color:#333333 #fafafa #fafafa #333333;
+  border-style: inset;
+}
+
+.taskbar{
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  width:100%;
+}
+
+.startlogo{
+  height:24px;
 }

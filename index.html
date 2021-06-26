@@ -15,28 +15,32 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<script>
-function anotherNeko() {
-	x = Math.floor(Math.random() * box.boundWidth());
-	y = Math.floor(Math.random() * box.boundHeight());
-  z = Math.round(Math.random());
-	scat = new Neko(x,y,z);
-}
-
-</script>
-
 <body>
 <!-- Neko-->
 <script src="https://webneko.net/n20171213.js"></script>
-<!--<a onclick="anotherNeko();return false;">Add Neko</a>-->
-<!--Content-->
-<div>
-  <h1 class="text-center mt-5">Harry's Web Projects</h1>
 
-  <img class="position-absolute bottom-0 start-50 translate-middle-x" src="https://hitwebcounter.com/counter/counter.php?page=7830713&style=0007&nbdigits=5&type=ip&initCount=0"/>
-  <div class="grey text-center small position-absolute bottom-0 start-50 translate-middle">Harry Bond 2021. Built with Bootstrap.</div>
+<!--Content-->
+<h1 class="text-center mt-5">Harry's Web Projects</h1>
+<a class="winui winuihover">Neko-Win</a>
+
+<div class="taskbar winui position-absolute bottom-0">
+  <span class="winui winuihover">
+    <img class="startlogo" src="assets/images/startlogo.gif"/>
+    Start
+  </span>
+
+  <span class="winuiinvert position-absolute bottom-0 end-0" id="time">
+    <script>
+      var d = new Date();
+      document.getElementById("time").innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2);
+    </script>
+  </span>
 </div>
 
 
+
+
+
+<img class="position-absolute top-0 end-0" src="https://hitwebcounter.com/counter/counter.php?page=7830713&style=0007&nbdigits=5&type=ip&initCount=0"/>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
