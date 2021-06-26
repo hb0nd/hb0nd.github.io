@@ -15,13 +15,20 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
+<script>
+function anotherNeko() {
+	x = Math.floor(Math.random() * box.boundWidth());
+	y = Math.floor(Math.random() * box.boundHeight());
+  z = Math.round(Math.random());
+	scat = new Neko(x,y,z);
+}
+
+</script>
+
 <body>
 <!-- Neko-->
-  <script>NekoType="white"</script><h1 id=nl>
-  <script src="https://webneko.net/n20171213.js"></script>
-  <a href="https://webneko.net">Neko</a></h1>
-<!-- Neko End-->
-
+<script src="https://webneko.net/n20171213.js"></script>
+<!--<a onclick="anotherNeko();return false;">Add Neko</a>-->
 <!--Content-->
 <div>
   <h1 class="text-center mt-5">Harry's Web Projects</h1>
