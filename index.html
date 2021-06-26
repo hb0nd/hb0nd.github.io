@@ -38,11 +38,15 @@
       var d = new Date();
       var dt = new Date(1,1,1,1,1,1,1);
       var clock_element = document.getElementsByName("time")[0];
+      var hrs = ("0" + d.getHours()).slice(-2);
+      var mins = ("0" + d.getMinutes()).slice(-2);
       var ampm = "AM"
-      if (d.getHours()>12){
+      
+      if (hrs>12){
         var ampm = "PM";
+        var hrs = hrs - 12;
       }
-      clock_element.innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2) +" "+ ampm;
+      clock_element.innerHTML = hrs + ":" + mins + " " + ampm;
     }
       setInterval(getTime, 1000);
     </script>
