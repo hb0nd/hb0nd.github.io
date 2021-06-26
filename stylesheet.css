@@ -10,6 +10,7 @@
 
 body{
   background-color: #008080;
+  user-select: none !important;
 }
 
 .winui{
