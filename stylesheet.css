@@ -23,11 +23,16 @@ body{
   border-style: outset;
 }
 
-.winuihover:hover{
+.winuiinteract:active{
   border-color:#333333 #fafafa #fafafa #333333;
   border-style: inset;
-  background-image: url("assets/images/dither.gif");
+  background-image: url("assets/images/dither.gif")!important;
 }
+
+.winuiinteract:hover{
+  background-image: url("assets/images/dither-dark.gif");
+}
+
 .winuiinvert{
   border-color:#333333 #fafafa #fafafa #333333;
   border-style: inset;

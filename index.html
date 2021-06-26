@@ -21,11 +21,11 @@
 <!--Content-->
 <h1 class="text-center mt-5">Harry's Web Projects</h1>
 
-<a class="winui winuihover" onclick="anotherNeko();return false;">Add More</a>
+<a class="winui winuiinteract" onclick="anotherNeko();return false;">Add More</a>
 
 <div class="taskbar winui position-absolute bottom-0">
 
-  <span class="winui winuihover">
+  <span class="winui winuiinteract">
     <img class="startlogo" src="assets/images/startlogo.gif"/>
     Start
   </span>
@@ -33,8 +33,13 @@
   <span class="winuiinvert position-absolute bottom-0 end-0" name="time">
     <script>
       var d = new Date();
+      var dt = new Date(1,1,1,1,1,1,1);
       var clock_element = document.getElementsByName("time")[0];
-      clock_element.innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2);
+      var ampm = "AM"
+      if (d.getHours()>12){
+        var ampm = "PM";
+      }
+      clock_element.innerHTML = ("0"+d.getHours()).slice(-2) + ":" + ("0"+d.getMinutes()).slice(-2) + " "+ ampm;
     </script>
   </span>
 </div>
