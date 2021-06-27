@@ -65,24 +65,22 @@ body{
 }
 .textmodify{
   user-select: text !important;
-
+  resize: none;
   border:0;
   padding:5px;
 }
-.textmodify:active{
-  resize: none;
-  border:0;
-  padding:;
-}
+
 .sizefill{
   height:auto;
   width:auto;
 }
 .windowprops{
   position:absolute;
+  display:flex;
+  margin:0;
+  padding:0;
   resize:both;
-  cursor: move;
-  z-index: 10;
+  overflow:hidden;
 }
 
 [ID^="layerNeko"]{
