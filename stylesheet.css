@@ -65,7 +65,7 @@ body{
 }
 .textmodify{
   user-select: text !important;
-  resize: none;
+  
   border:0;
   padding:5px;
 }
@@ -77,6 +77,12 @@ body{
 .sizefill{
   height:auto;
   width:auto;
+}
+.windowprops{
+  position:absolute;
+  resize:both;
+  cursor: move;
+  z-index: 10;
 }
 
 [ID^="layerNeko"]{
