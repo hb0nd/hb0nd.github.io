@@ -6,7 +6,6 @@
   font-family: monospace;
   font-weight: bold !important;
   user-select: none !important;
-
 }
 
 body{
@@ -19,7 +18,7 @@ body{
 .winui{
   border-color:#fafafa #333333 #333333 #fafafa;
   background-color: #C7C7C7;
-  border-width:1%;
+  border-width:2px;
   padding:2px;
   text-decoration: none;
   border-style: outset;
@@ -29,7 +28,7 @@ body{
   border-color:#333333 #fafafa #fafafa #333333;
   border-style: inset;
   background-image: url("assets/images/dither.gif")!important;
-  transform: translate(10px);
+  transform: translate(1px);
 
 }
 
@@ -56,8 +55,31 @@ body{
   white-space: nowrap;
   min-width: 0;
 }
-.baricon{
-  height:24px;
+.icon-med{
+  height:20px;
+}
+.icon-small{
+  height:20px;
+}
+.margin-small{
+  margin:3px;
+}
+.textmodify{
+  user-select: text !important;
+  resize: none;
+  border:0;
+  padding:5px;
+  width:100%;
+  height:100%;
+}
+.textmodify:active{
+  resize: none;
+  border:0;
+  padding:;
+}
+.sizefill{
+  height:100%;
+  width:100%;
 }
 
 [ID^="layerNeko"]{
