@@ -63,9 +63,9 @@
   </div>
 </div>
 
-<div id="window">
+<div id="window" style="width:60vw;height:40vh; max-width:600px; min-width:300px; min-height:150px;">
   <div id="windowheader"></div>
-  <iframe style="width:60vw;height:40vh; max-width:600px; min-width:300px; min-height:150px;" src="notepad.html"></iframe>
+  <iframe style="width:100%; height:100%;" src="notepad.html"></iframe>
 </div>
 
 <script>
@@ -110,14 +110,20 @@ function toggleNotepad(){
   }
 }
 var isfullscreen = 0;
+var ogtop = 0;
+var ogleft = 0;
 function fullscreenApp(){
   var x = document.getElementById("window");
   if (isfullscreen == 0) {
-    x.style.width = "100vw";
-    x.style.height = "100vh";
+    ogleft = x.style.left;
+    ogtop = x.style.top;
+    x.style.cssText += "width:100vw;height:"+(window.innerHeight-42)+"px;max-width:100vw;left:0px;top:0px;";
+    isfullscreen = 1;
   } else {
-    x.style.width = "60vw";
-    x.style.height = "40vh";
+    x.style.cssText += "width:60vw;height:40vh;max-width:600px;";
+    x.style.left = ogleft;
+    x.style.top = ogtop;
+    isfullscreen = 0;
   }
 }
 </script>
