@@ -75,8 +75,13 @@ body{
   width:auto;
 }
 #window{
+<<<<<<< HEAD
   position:absolute;
   z-index: -10;
+=======
+  position: absolute;
+  z-index: 9;
+>>>>>>> parent of 78ace7c (window hidden by default)
 }
 #windowheader{
   position:absolute;
