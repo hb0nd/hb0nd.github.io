@@ -83,12 +83,13 @@ body{
   cursor: move;
   height:35px;
   z-index: 10;
-  width:75%;
+  width:80%;
 }
 #windowheader:hover{
   height:100%;
 }
 
 [ID^="layerNeko"]{
-  position: relative;
+  position: absolute;
+  z-index:99999;
 }

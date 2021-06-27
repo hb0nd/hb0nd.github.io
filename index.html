@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+<h1 id=nl><script src="https://webneko.net/n20171213.js"></script></h1>
 
 <!--Content-->
 <h1 class="text-center mt-5">Harry's Web Projects</h1>
@@ -95,14 +95,13 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    document.onmouseup = null;
     document.onmousemove = null;
   }
 }
 </script>
 
 <script>
-function toggleNotepad() {
+function toggleNotepad(){
   var x = document.getElementById("window");
   if (x.style.display === "none") {
     x.style.display = "flex";
@@ -110,11 +109,17 @@ function toggleNotepad() {
     x.style.display = "none";
   }
 }
-
-function bringToFront() {
-    this.style.zIndex = "1";
+var isfullscreen = 0;
+function fullscreenApp(){
+  var x = document.getElementById("window");
+  if (isfullscreen == 0) {
+    x.style.width = "100vw";
+    x.style.height = "100vh";
+  } else {
+    x.style.width = "60vw";
+    x.style.height = "40vh";
+  }
 }
-
 </script>
 <!-- Neko-->
 <script>
@@ -124,7 +129,7 @@ function anotherNeko(bActive) {
 	scat = new Neko(x,y, bActive);
 }</script>
 
-<h1 id=nl><script src="https://webneko.net/n20171213.js"></script></h1>
+
 
 <img class="position-absolute top-0 end-0" src="https://hitwebcounter.com/counter/counter.php?page=7830713&style=0007&nbdigits=5&type=ip&initCount=0"/>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
