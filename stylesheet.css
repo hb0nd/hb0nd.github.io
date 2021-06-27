@@ -75,20 +75,18 @@ body{
   width:auto;
 }
 #window{
-<<<<<<< HEAD
   position:absolute;
-  z-index: -10;
-=======
-  position: absolute;
   z-index: 9;
->>>>>>> parent of 78ace7c (window hidden by default)
 }
 #windowheader{
   position:absolute;
   cursor: move;
   height:35px;
-  z-index: 1000;
-  width:100%;
+  z-index: 10;
+  width:75%;
+}
+#windowheader:hover{
+  height:100%;
 }
 
 [ID^="layerNeko"]{
