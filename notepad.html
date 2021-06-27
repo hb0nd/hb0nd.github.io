@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <!--Made by Harry Bond 2021-->
-<html class="sizefill"></html>
 
 <head>
   <title>Harry's Web Projects</title>
@@ -15,21 +14,24 @@
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body>
-  <div class="winui sizefill">
+<body style="height:100vh;">
+  <div class="d-flex winui flex-column" style="height:100vh;">
     <div style="background-color:#00007F; color:white!important;">
       <img class="icon-small margin-small" src="assets/images/Notepad.ico"/>
       Hi There.txt - Notepad
-      <span class="float-end">
+      <span class="d-inline-flex float-end">
         <a href="index.html"><img class="winui winuiinteract margin-small me-0" src="assets\images\minimise.gif"></img
         ></a><a href="index.html"><img class="winui winuiinteract margin-small ms-0" src="assets\images\maximise.gif"></img
         ></a><a href="index.html"><img class="winui winuiinteract margin-small ms-0" src="assets\images\exit.gif"></img></a>
       </span>
     </div>
-    File Edit Search Help
+    <div class="py-1 ms-2">
+      <u>F</u>ile <u>E</u>dit <u>S</u>earch <u>H</u>elp
+    </div>
 
-    <div class="h-100 winuiinvert" style="background-color:white;">
-      <textarea class="textmodify" placeholder="heloooo you can write here"></textarea>
+    <!--<div class="sizefill winuiinvert" style="background-color:white;">-->
+    <div class="flex-grow-1 winui winuiinvert" style="padding:0;">
+        <textarea class="w-100 h-100 textmodify" placeholder="Helloooo you can write here"></textarea>
     </div>
   </div>
 </body>
