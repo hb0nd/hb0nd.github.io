@@ -69,12 +69,15 @@
 </div>
 
 <script>
-// Make the DIV element draggable:
-dragElement(document.getElementById("window"));
+var isfullscreen = 0;
+var x = document.getElementById("window");
+var y = document.getElementById("windowheader");
 
+// Make the DIV element draggable:
+dragElement(x);
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  document.getElementById("windowheader").onmousedown = dragMouseDown;
+  y.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -91,39 +94,48 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    elmnt.style.cssText += "; left: " +(elmnt.offsetLeft - pos1) + "px; top: " + (elmnt.offsetTop - pos2) + "px";
+    if (isfullscreen == 0){
+      elmnt.style.cssText += "; left: " +(elmnt.offsetLeft - pos1) + "px; top: " + (elmnt.offsetTop - pos2) + "px";
+    }
   }
 
   function closeDragElement() {
     document.onmousemove = null;
   }
 }
-</script>
 
-<script>
 function toggleNotepad(){
-  var x = document.getElementById("window");
   if (x.style.display === "none") {
     x.style.display = "flex";
   } else {
     x.style.display = "none";
   }
 }
-var isfullscreen = 0;
+
 var ogtop = 0;
 var ogleft = 0;
+function fullscreenTrigger(){
+  if (isfullscreen == 0){
+    isfullscreen = 1;
+    fullscreenApp()
+  }
+  else {
+    isfullscreen = 0;
+    fullscreenApp()
+  }
+}
 function fullscreenApp(){
-  var x = document.getElementById("window");
-  if (isfullscreen == 0) {
+  if (isfullscreen == 1) {
+    window.addEventListener('resize', fullscreenApp);
+    y.style.pointerEvents ="none";
     ogleft = x.style.left;
     ogtop = x.style.top;
-    x.style.cssText += "width:100vw;height:"+(window.innerHeight-42)+"px;max-width:100vw;left:0px;top:0px;";
-    isfullscreen = 1;
+    x.style.cssText += "width:100vw;height:"+(window.innerHeight-50)+"px;max-width:100vw;left:0px;top:0px;";
   } else {
+    y.style.pointerEvents ="auto";
     x.style.cssText += "width:60vw;height:40vh;max-width:600px;";
     x.style.left = ogleft;
     x.style.top = ogtop;
-    isfullscreen = 0;
   }
 }
 </script>
