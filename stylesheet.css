@@ -7,6 +7,12 @@
   font-weight: bold !important;
   user-select: none !important;
 }
+html{
+  height:0;
+  margin:0;
+  padding:0;
+  border:0;
+}
 
 body{
   background-color: #008080;
@@ -68,6 +74,16 @@ body{
   resize: none;
   border:0;
   padding:5px;
+}
+
+.catborder{
+  border: 10px solid transparent;
+  padding: 15px;
+  background-color:pink;
+  background-image:url("assets/images/background.gif");
+  background-blend-mode: luminosity;
+  border-image:url("assets/images/border.gif") 50 stretch;
+  overflow: hidden;
 }
 
 .sizefill{
