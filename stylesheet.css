@@ -75,16 +75,15 @@ body{
   width:auto;
 }
 #window{
-  position: absolute;
-  z-index: 9;
-  display:none;
+  position:absolute;
+  z-index: -10;
 }
 #windowheader{
-  position: absolute;
+  position:absolute;
   cursor: move;
-  z-index: 10;
   height:35px;
-  width:70%;
+  z-index: 1000;
+  width:100%;
 }
 
 [ID^="layerNeko"]{
