@@ -86,7 +86,7 @@ body{
   width:80%;
 }
 #windowheader:hover{
-  height:100%;
+  height:70px;
 }
 
 [ID^="layerNeko"]{
