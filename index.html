@@ -63,7 +63,7 @@
   </div>
 </div>
 
-<div id="window" style="width:60vw;height:40vh; max-width:600px; min-width:300px; min-height:150px;">
+<div id="window" style="width:60vw;height:40vh; max-width:600px; min-width:300px; min-height:150px; display:none;">
   <div id="windowheader"></div>
   <iframe style="width:100%; height:100%;" src="notepad.html"></iframe>
 </div>
@@ -130,7 +130,7 @@ function fullscreenApp(){
     y.style.pointerEvents ="none";
     ogleft = x.style.left;
     ogtop = x.style.top;
-    x.style.cssText += "width:100vw;height:"+(window.innerHeight-50)+"px;max-width:100vw;left:0px;top:0px;";
+    x.style.cssText += "width:100vw;height:"+(window.innerHeight-50)+"px;max-width:100vw;left:0px;top:0px;z-index:9999999;";
   } else {
     y.style.pointerEvents ="auto";
     x.style.cssText += "width:60vw;height:40vh;max-width:600px;";
@@ -144,7 +144,8 @@ function fullscreenApp(){
 function anotherNeko(bActive) {
 	x = Math.floor(Math.random() * box.boundWidth());
 	y = Math.floor(Math.random() * box.boundHeight());
-	scat = new Neko(x,y, bActive);
+  z = Math.random();
+	scat = new Neko(x,y,z);
 }</script>
 
 
