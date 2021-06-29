@@ -3,7 +3,8 @@
 
 *{
   color: black !important;
-  font-family: monospace;
+  font-family: w95fa;
+  
   font-weight: bold !important;
   user-select: none !important;
 }
@@ -108,4 +109,9 @@ body{
 [ID^="layerNeko"]{
   position: absolute;
   z-index:99999;
+}
+
+@font-face {
+    font-family: "w95fa";
+    src: url("assets/w95fa.woff2") format('woff2');
 }
